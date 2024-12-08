@@ -4,42 +4,23 @@
 ## Fall Quarter 2024
 # Date: 11.30.24
 # Student: Natalia Zorrilla
-# Final Project
+# Final Project - Static Plots
 ## Due: December 7, 2024 before midnight on Gradescope
-
-library(rvest)
-library(httr)
-library(sf)
-library(tidyverse)
-library(ggplot2)
-library(tidyverse)
-library(sf)
-library(lubridate)
-library(spData)
-library(shiny)
-library(dplyr)
-library(rsconnect)
-library(scales)
-library(broom)
-library(car)
-library(knitr)
-library(kableExtra)
-library(haven)
-library(stargazer)
-library(tidytext)
-library(textdata)
-library(tidyverse)
-library(sentimentr)
-library(SnowballC)
-library(udpipe)
-library(pdftools)
-
-
 ############################################################################################################
 #THIS PART OF THE PROJECT WILL SERVE TO VISUALIZE DIFFERENT ASPECTS OF CRIME, NARCOTICS CRIMES, MENTAL HEALTH RESOURCES AND SOCIOECONOMIC INDICATORS
+
+library(dplyr)
+library(ggplot2)
+library(readr)
+library(scales)
+library(RColorBrewer)
+library(viridis)
+library(sf)
+
 #All plots in this script will be automatically saved in the current working directory. 
 #To replicate this project, please set your working directory in this initial stage. 
 setwd("/Users/Natalia/Documents/The University of Chicago/Harris School of Public Policy/MPP/Fall quarter 2024/PPHA 30536 1 - Data and Programming for Public Policy II - R Programming /Assignments/Final project")
+
 
 #Clear all objects
 rm(list=ls())

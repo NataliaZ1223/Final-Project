@@ -9,6 +9,8 @@
 
 #IN THIS PART OF THE PROJECT WE'LL PERFORM AN OLS ANALYSIS ON NARCOTICS CRIMES, MENTAL HEALTH RESOURCES AND SOCIOECONOMIC INDICATORS
 
+#install.packages(c("tidyverse", "stargazer", "car"))
+
 library(tidyverse) 
 library(stargazer)  
 library(car)       
@@ -18,6 +20,8 @@ rm(list=ls())
 
 #To replicate this project, please set your working directory in this initial stage. 
 setwd("/Users/Natalia/Documents/The University of Chicago/Harris School of Public Policy/MPP/Fall quarter 2024/PPHA 30536 1 - Data and Programming for Public Policy II - R Programming /Assignments/Final project")
+
+#Import data. If you don't have it, please run first data.R file
 narcotics_health_project_data <- read_csv("narcotics_health_project_data.csv")
 
 #We are going to perform three different OLS regressions adjusting the independent variables

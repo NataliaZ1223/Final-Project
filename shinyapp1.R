@@ -1,3 +1,16 @@
+# PPHA 30536 1 - Data and Programming for Public Policy II - R Programming 
+# Data Skills 2 - R
+## Fall Quarter 2024
+# Date: 12.07.24
+# Student: Natalia Zorrilla
+# Final Project - Shiny App 1
+## Due: December 7, 2024 before midnight on Gradescope
+############################################################################################################
+
+#IN THIS PART OF THE PROJECT WE'LL CREATE A SHINY APP TO EXPLORE THE RELATIONSHIP BETWEEN CRIME AND MENTAL HEALTH PROVIDERS
+
+#install.packages(c("shiny", "sf", "dplyr", "ggplot2", "scales"))
+
 # Load Libraries
 library(shiny)
 library(sf)
@@ -7,6 +20,12 @@ library(scales)
 
 #Clear all objects
 rm(list=ls())
+
+#Adjust the working directory as needed
+setwd("/Users/Natalia/Documents/The University of Chicago/Harris School of Public Policy/MPP/Fall quarter 2024/PPHA 30536 1 - Data and Programming for Public Policy II - R Programming /Assignments/Final Project")
+
+#Set the working directory where the files: chicago_narcotics_sf.rds and mental_health_resources.rds are located.
+#Note: If you don't have the files, please run data.R file first.
 
 #Load Data
 zippath <- "/Users/Natalia/Documents/The University of Chicago/Harris School of Public Policy/MPP/Fall quarter 2024/PPHA 30536 1 - Data and Programming for Public Policy II - R Programming /Assignments/Final project/Boundaries - Neighborhoods"
@@ -24,12 +43,13 @@ if (st_crs(chicago_shape) != st_crs(chicago_narcotics_sf)) {
   chicago_narcotics_sf <- st_transform(chicago_narcotics_sf, st_crs(chicago_shape))
 }
 
-# Data Validity Check
+#Data Validity Check
 if (!exists("chicago_shape") || !exists("chicago_narcotics_sf") || !exists("mh_sf")) {
   stop("One or more required datasets could not be loaded. Check file paths.")
 }
 
-# UI
+#Shiny App
+#UI
 ui <- fluidPage(
   titlePanel("Narcotics-Related Crime and Mental Health Resources in Chicago"),
   

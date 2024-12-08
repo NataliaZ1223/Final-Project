@@ -9,6 +9,8 @@
 
 #IN THIS PART OF THE PROJECT WE'LL CREATE A SHINY APP TO EXPLORE THE RELATIONSHIP BETWEEN CRIME AND SOCIOECONOMIC FACTORS IN CHICAGO FOR 2018 TO 2022
 
+#install.packages(c("shiny", "sf", "dplyr", "ggplot2", "scales", "tidyverse"))
+
 library(shiny)
 library(dplyr)
 library(ggplot2)

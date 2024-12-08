@@ -8,10 +8,20 @@
 ############################################################################################################
 
 #THIS PART OF THE PROJECT WILL FOCUS ON SENTIMENT ANALYSIS OF THE REPORT TREATEMENT NOT TRAUMA
+
 #All sentiment plots in this script will be automatically saved in the current working directory. 
 #To replicate this project, please set your working directory in this initial stage. 
 setwd("/Users/Natalia/Documents/The University of Chicago/Harris School of Public Policy/MPP/Fall quarter 2024/PPHA 30536 1 - Data and Programming for Public Policy II - R Programming /Assignments/Final project")
 
+#install.packages(c("rvest", "httr", "tidyverse", "tidytext", "textdata", "sentimentr", "pdftools"))
+
+library(rvest)
+library(httr)
+library(tidyverse)
+library(tidytext)
+library(textdata)
+library(sentimentr)
+library(pdftools)
 #Clear all objects
 rm(list=ls())
 

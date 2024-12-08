@@ -11,6 +11,8 @@
 
 #Research Question: How do access to mental health resources and socioeconomic factors influence crime rates in Chicago’s neighborhoods? 
 
+#install.packages(c("dplyr", "readr", "stringr", "sf", "httr"))
+
 library(dplyr)
 library(readr)
 library(stringr)
